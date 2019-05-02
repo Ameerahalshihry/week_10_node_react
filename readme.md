@@ -1,7 +1,5 @@
 # MERN - MongoDB Express React NodeJs
-
   
-
 ## Introduction
 
 We've now seen how React is able to render HTML in the DOM with the help of JSX. We've also combined JavaScript and JSX to loop through arrays of data and apply that data to components via this.props.
@@ -96,7 +94,7 @@ $ touch todo.js
 ```
 inside `todo.js`
 
-```
+```js
 const mongoose = require('mongoose')
 const Schema = mongoose.Schema
 
@@ -113,7 +111,7 @@ module.exports = Todo
 
 ### Creating end points
 CRUD routes
-```
+```js
 const express = require('express')
 const router = express.Router()
 //import todo model
@@ -151,7 +149,6 @@ router.post('/', (req, res)=> {
  })
 })
 
-// http://localhost:7777/todos/123747588588558
 router.get('/:id', (req, res)=> {
  
  Todo.findById(req.params.id)
