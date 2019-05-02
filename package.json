@@ -5,7 +5,7 @@
   "main": "server.js",
   "scripts": {
     "test": "nodemon server.js",
-    "client" : "cd client && npm start",
+    "client" : "cd frontend && npm start",
     "dev" : "concurrently \"npm test\" \"npm run client\""
   },
   "author": "Ebere",

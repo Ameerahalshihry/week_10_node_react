@@ -19,14 +19,20 @@ router.get('/', (req, res)=> {
 //post new todo
 router.post('/', (req, res)=> {
 
- Todo.create(req.body)
+ let todo = new Todo(req.body)
+ 
+ todo.save()
  .then(() => {
-   res.json({ message : "Todo Created Successfully!"})
+   res.json({ 
+    message : "Todo Created Successfully!", 
+    todo: todo
+   })
  })
  .catch((err) => {
-   res.json({ message : "Something went terribly wrong!"})
+   res.json({ 
+    message : "Something went terribly wrong!"
+   })
  })
- // res.status(200).json()
 })
 
 // http://localhost:7777/todos/123747588588558
@@ -54,6 +60,7 @@ router.put('/:id', (req, res)=> {
 })
 
 router.delete('/:id', (req, res)=> {
+  console.log("ok")
  Todo.findByIdAndDelete(req.params.id)
  .then(()=>{
   res.json({message : "تو الحذف"})
@@ -63,5 +70,5 @@ router.delete('/:id', (req, res)=> {
  })
 
 })
-//200 201 400 404 500
+
 module.exports = router
