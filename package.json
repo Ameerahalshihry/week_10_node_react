@@ -1,0 +1,17 @@
+{
+  "name": "node_full_app",
+  "version": "1.0.0",
+  "description": "full crud node and friends",
+  "main": "server.js",
+  "scripts": {
+    "test": "node server.js"
+  },
+  "author": "Ebere",
+  "license": "ISC",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^7.0.0",
+    "express": "^4.16.4",
+    "mongoose": "^5.5.5"
+  }
+}
