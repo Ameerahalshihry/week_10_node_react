@@ -54,7 +54,7 @@ router.put('/:id', (req, res)=> {
 })
 
 router.delete('/:id', (req, res)=> {
- rTodo.findByIdAndDelete(req.params.id)
+ Todo.findByIdAndDelete(req.params.id)
  .then(()=>{
   res.json({message : "تو الحذف"})
  })
